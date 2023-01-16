@@ -1,0 +1,51 @@
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+   
+}
+html{
+    border: solid black 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/*.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-container{
+    width: 1000px;
+    height: 500px;
+    border: solid black 2px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.player{
+    border: solid red 2px;
+    width: 40px;
+    height: 80px;   
+}*/
+
+#foo{
+    border: solid red 2px;
+}
+
+.undisplayedCanvas{
+    border: solid purple 2px;
+}
+
+.messageErrorDisplay{
+    width: 100%;
+    border: solid green 2px;
+}
+
