@@ -8,6 +8,7 @@ const context = canvas.getContext('2d');
 
 if (canvas.getContext){
     /*
+
                                    // Rectangles
     
     //{ce bloc de code dessine des carrés
@@ -46,7 +47,7 @@ context.stroke();
                               //move To 
 
 //{ce bloc de code dessine un emoticone qui souris 
-//décommenté ligne 45 pour voir le résultat dans un navigateur web
+//décommentez ligne 45 pour voir le résultat dans un navigateur web
 context.beginPath();
 context.arc(75,75,50,0 ,Math.PI * 2 ,true ) ; //Cercle éxtérieur
 context.moveTo(110,75) //nouveau départ du stylo
@@ -63,7 +64,7 @@ context.arc(90, 65, 5, 0, Math.PI * 2, true);  // Oeil droit
                             //line To
                             
 //{ce bloc de code déssine 2 triangles dont un plein et un ayant seulement des contours
-//décommenté ligne 62 pour voir le resultat dans un navigateur web
+//décommentez ligne 62 pour voir le resultat dans un navigateur web
 context.beginPath();
     context.moveTo(25, 25);
     context.lineTo(105, 25);
@@ -78,6 +79,47 @@ context.beginPath();
     context.closePath();
     context.stroke();
 //} */
+
+   /*           
+                        //arc
+
+    //{Ce bloc de code dessine de multipe arc de cercles décommentez ligne 83
+    //pour voir le résultat dans un navigateur web
+    
+  for (let i = 0; i < 4; i++) { //boucle sur les colonnes(y)
+      for (let j = 0; j < 3; j++) { //boucles sur les lignes(x)
+        context.beginPath();
+        const x = 25 + j * 50; // abscisse (x)
+        const y = 25 + i * 50; // ordonnée (y)
+        const radius = 20; // rayon d'arc
+        const startAngle = 0; // Point de départ du cercle
+        const endAngle = Math.PI + (Math.PI * j) / 2; // Point final pour le cercle
+        const counterclockwise = i % 2 !== 0; // sens de rotation horaire ou non
+
+        context.arc(x, y, radius, startAngle, endAngle, counterclockwise);
+        console.log(x,y,radius,startAngle,endAngle,counterclockwise )
+        if (i > 1) {
+          context.fill();
+        } else {
+          context.stroke();
+        }
+      }
+    }
+    context.beginPath();
+    context.arc(210,55,50,0,Math.PI,true)
+    context.fill();
+
+    context.beginPath();
+    context.arc(210,110,25,0,Math.PI *2);
+    context.stroke();
+
+    context.beginPath();
+    context.arc(210,155,15,0,Math.PI /2 ,true);
+    context.fill();
+//} */
+
+
+
 
 }
 else{
